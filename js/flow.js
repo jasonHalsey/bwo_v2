@@ -3,7 +3,7 @@ jQuery(document).ready(function(){
 });
 
 var zoomLevel = zoomLevel;
-var flowAPI = 'http://waterservices.usgs.gov/nwis/iv/?format=json&indent=on&sites=' + usgsNum + '&parameterCd=00060,00065&siteType=ST';
+var flowAPI = 'https://waterservices.usgs.gov/nwis/iv/?format=json&indent=on&sites=' + usgsNum + '&parameterCd=00060,00065&siteType=ST';
    
 weatherFn = function(url) {
   jQuery.getJSON(url, function (json) {
@@ -101,6 +101,7 @@ weatherFn = function(url) {
 }
 
 jQuery.getJSON(flowAPI, function (json) {
+  console.log('in the function');
   var baseString = json.value.timeSeries[0]
   var createTime = baseString.values[0].value[0].dateTime
   var locationName = baseString.sourceInfo.siteName
