@@ -41,6 +41,13 @@ jQuery(document).ready(function() {
         scrollTop: jQuery("#cta_row").offset().top -menuheight }, 2000);
   });
 
+  jQuery(".icon-calendar").click(function() {
+    console.log("Cal Button Clicked");
+    var menuheight = jQuery(".fixed_nav").height();
+    jQuery('html, body').animate({
+        scrollTop: jQuery("#cal-top").offset().top -menuheight }, 2000);
+  });
+
 
 	
   jQuery('ul#menu').addClass('vertical medium-horizontal menu');
