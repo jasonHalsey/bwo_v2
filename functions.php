@@ -389,10 +389,16 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
         'type' => 'text_medium',
       ),     
       array(
-        'name'    => __( 'Cost', 'cmb2' ),
+        'name'    => __( 'Event Cost', 'cmb2' ),
         'id'      => $prefix . 'cost',
-        'type' => 'text_medium',
+        'type' => 'radio',
+        'show_option_none' => false,
+        'options'          => array(
+            'free' => __( 'Free Event', 'cmb2' ),
+            'book_it'   => __( 'Add Flybook Link', 'cmb2' ),
+        ),
       )
+
     )
   );
 

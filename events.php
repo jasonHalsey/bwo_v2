@@ -15,11 +15,19 @@ Template Name: Events
     $loop = new WP_Query( $mypost );
   ?>
   <?php while ( $loop->have_posts() ) : $loop->the_post();?>
-      <div>          
+      <div class="class_container">          
         <h4><?php the_title() ?></h4>
         <p><?php echo get_post_meta( $post->ID, '_cmb2_description', true ); ?></p>
         <p>Location:&nbsp;<?php echo get_post_meta( $post->ID, '_cmb2_location', true ); ?></p>
-        <p>Cost:&nbsp;<?php echo get_post_meta( $post->ID, '_cmb2_cost', true ); ?></p>
+        <?php $event_reserve = get_post_meta( $post->ID, '_cmb2_cost', true ); 
+          if($event_reserve === 'book_it'){
+          ?>
+          <a href="https://dco.theflybook.com/book" class="reserve_button">Book Online Now</a>
+          <?php }else{ ?>
+          <a href="#" class="reserve_button">Free Event</a>
+          <?php
+            }
+          ?>
       </div>
   <?php endwhile; ?>
   <?php wp_reset_query(); ?>
