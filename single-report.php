@@ -67,6 +67,7 @@ Template Name: river_report
                 ?>
                 <p> <?php echo get_post_meta( $post->ID, '_cmb2_river_description', true ); ?></p>
                 <h3>Guide Report</h3>
+                  <span><?php the_modified_date(); ?></span>
                 <p> <?php echo get_post_meta( $post->ID, '_cmb2_guide_report', true ); ?></p>
                 <h3>Weather</h3>
                 <div id="weather_icon" class="card-img-top"> </div>

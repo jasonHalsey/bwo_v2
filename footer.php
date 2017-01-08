@@ -4,20 +4,13 @@
     <div class="small-12 medium-3  columns">
       <p class="footer_logo hide-for-small-only"><i class="icon-solo_shield"></i>Confluence Fly Shop</p> 
       <p class="footer_logo show-for-small-only"><i class="icon-reel_icon"></i> Confluence</p> 
-<!--       <p class="footer-links">
-        <a href="#">Home</a>
-        <a href="#">Blog</a>
-        <a href="#">Fishing Reports</a>
-        <a href="#">Contact</a>
-      </p> -->
+
       <ul class="inline-list social">
-        <a href="#"><i class="icon-facebook"></i></a>
-        <a href="#"><i class="icon-twitter"></i></a>
-        <a href="#"><i class="icon-instagram"></i></a>
+        <a href="https://www.facebook.com/ConfluenceFlyShop/?fref=ts"><i class="icon-facebook"></i></a>
+        <a href="https://www.instagram.com/confluenceflyshop/"><i class="icon-instagram"></i></a>
       </ul>
       <p class="copywrite">&copy; Confluence Fly Shop <?php echo date("Y"); ?></p>
     </div>
-
 
 
     <div class="small-12 medium-3 columns drop-col hours-block">
@@ -51,26 +44,8 @@
     </div>
 
     <div class="small-12 medium-3 drop-col columns">
-      
-      <form class="footer-form">
-        <div class="row">
-          <div class="medium-9 medium-push-3 columns">
-           <p class="hours-title">Newsletter Sign-Up</p> 
-            <label>
-              <input type="email" id="email" placeholder="Email Address" />
-            </label>
-          </div>
-        </div>
-          <div class="row">
-            <div class="medium-9 medium-push-3 columns">
-              <button class="submit" type="submit" value="Submit">Send</button>
-            </div>
-          </div>
-        </div>
-      </form>
+      <?php get_template_part( 'inc/mailchimp_form'); ?>
     </div>
-
-
 
   </div>
   <a href="#0" class="cd-top icon-circle-up"></a>

@@ -88,7 +88,7 @@ h3.river_sub_title{
   /* Anchor will cover the whole item by default */
   /* For some effects it will show as a button */
   figure figcaption > a {
-    z-index: 1000;
+    z-index: 888;
     text-indent: 200%;
     white-space: nowrap;
     font-size: 0;
@@ -322,7 +322,8 @@ section.module.content {
   }
 }
 section.module.parallax {
-  height: 600px;
+  // height: 600px;
+  height: calc(70vh);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;

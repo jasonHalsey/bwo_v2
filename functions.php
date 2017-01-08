@@ -212,7 +212,7 @@ function post_type_testi()
     'query_var' => true,
     'rewrite' => array( 'slug' => 'testi' ),
     'capability_type' => 'post',
-    'hierarchical' => true,
+    'hierarchical' => false,
     'menu_position' => null,
     'supports' => array('title')
     ); 
@@ -266,7 +266,7 @@ function post_type_staff()
     'query_var' => true,
     'rewrite' => array( 'slug' => 'staff' ),
     'capability_type' => 'post',
-    'hierarchical' => true,
+    'hierarchical' => false,
     'menu_position' => null,
     'supports' => array('title')
     ); 
@@ -293,7 +293,7 @@ function post_type_report()
     'query_var' => true,
     'rewrite' => array( 'slug' => 'report' ),
     'capability_type' => 'post',
-    'hierarchical' => true,
+    'hierarchical' => false,
     'menu_position' => null,
     'supports' => array('title','excerpt', 'thumbnail')
     ); 

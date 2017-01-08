@@ -43,7 +43,7 @@ get_header(); ?>
           <img src="<?php echo bloginfo('template_directory'); ?>/images/blog_bg_2.jpg" alt="Blog Posts"/>
           <figcaption>
             <h2>Latest <span>Posts</span></h2>
-            <p>Get the latest intel from our guides</p>
+            <p>Stay Connected</p>
             <a href="<?php echo home_url( '/blog' ); ?>">View more</a>
           </figcaption>     
         </figure>
