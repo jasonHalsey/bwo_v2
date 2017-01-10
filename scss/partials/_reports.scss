@@ -88,7 +88,7 @@ h3.river_sub_title{
   /* Anchor will cover the whole item by default */
   /* For some effects it will show as a button */
   figure figcaption > a {
-    z-index: 888;
+    z-index: 1000;
     text-indent: 200%;
     white-space: nowrap;
     font-size: 0;
@@ -158,10 +158,10 @@ h3.river_sub_title{
     -webkit-transform: translate3d(0,100%,0);
     transform: translate3d(0,100%,0);
     @include breakpoint(1600px) {
-      margin: 15% 0 10px 0
+      margin: 5% 0 10px 0
     }
     @include breakpoint(639px down) {
-      margin: 30% 0 10px 0
+      margin: 0% 0 10px 0
     }
   }
 
@@ -178,14 +178,20 @@ h3.river_sub_title{
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
     @include breakpoint(1600px) {
-      margin: 15% 0 10px 0;
+      margin: 0% 0 10px 0;
     }
   }
 
   figure.effect-oscar_report h2.long_h2{
-    margin: 0% 0 10px 0;
+    margin: -18% 0 10px 0;
+    @include breakpoint(1600px) {
+      margin: -8% 0 10px 0
+    }
+    @include breakpoint(639px down) {
+      margin: 0% 0 10px 0
+    }
     &:hover{
-      margin: 30% 0 10px 0;
+      margin: 0% 0 10px 0;
     }
   }
 
@@ -322,8 +328,7 @@ section.module.content {
   }
 }
 section.module.parallax {
-  // height: 600px;
-  height: calc(70vh);
+  height: 600px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
