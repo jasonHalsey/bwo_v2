@@ -34,13 +34,14 @@ Template Name: river_report
     }
   ?>
 
-  <section class="module parallax parallax-1" style="background-image: url(<?php echo get_post_meta( $post->ID, '_cmb2_report_image', true ); ?>)">
-    <div class="container">
-      <h1><?php the_title() ?></h1>
-    </div>
-  </section>
+<section class="fixed_img_container">
+  <img src="<?php echo get_post_meta( $post->ID, '_cmb2_report_image', true ); ?>" />
+</section>
+<section class="river_title">
+  <h1><?php the_title() ?></h1>
+</section>
 
-<div class="row">
+<div class="sliding_content_container row">
   <section class="module content">
     <div class="container">
       <div class="large-8 medium-8 columns"> 

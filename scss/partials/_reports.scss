@@ -395,3 +395,35 @@ h6.species_title{
     padding:1.0em;
   }
 }
+
+.fixed_img_container{
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: yellow;
+  img{
+    width:100%;
+    height:auto;
+  }
+}
+
+.river_title{
+  h1{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+.sliding_content_container {
+  position: relative;
+  background-color: #FFF;
+  width:100%!important;
+  max-width: 100%!important;
+  padding: 0 2.0em!important;
+}
+
