@@ -49,7 +49,7 @@ weatherFn = function(url) {
     else if($.inArray(weatherWeather, ['Ice Pellets','Light Ice Pellets','Heavy Ice Pellets','Ice Pellets in Vicinity','Showers Ice Pellets','Thunderstorm Ice Pellets','Ice Crystals','Hail','Small Hail/Snow Pellets','Light Small Hail/Snow Pellets','Heavy small Hail/Snow Pellets','Showers Hail','Hail Showers']) >= 0) {
       jQuery('#weather_icon').addClass('diw-cloud-cloud-hail');
     }
-    else if($.inArray(weatherWeather, ['Freezing Rain Snow','Light Freezing Rain Snow','Heavy Freezing Rain Snow','Freezing Drizzle Snow','Light Freezing Drizzle Snow','Heavy Freezing Drizzle Snow','Snow Freezing Rain','Light Snow Freezing Rain','Heavy Snow Freezing Rain','Snow Freezing Drizzle','Light Snow Freezing Drizzle','Heavy Snow Freezing Drizzle']) >= 0) {
+    else if($.inArray(weatherWeather, ['Freezing Rain Snow','Light Freezing Rain Snow','Heavy Freezing Rain Snow','Freezing Drizzle Snow','Light Freezing Drizzle Snow','Patchy Freezing Fog','Heavy Freezing Drizzle Snow','Snow Freezing Rain','Light Snow Freezing Rain','Heavy Snow Freezing Rain','Snow Freezing Drizzle','Light Snow Freezing Drizzle','Heavy Snow Freezing Drizzle']) >= 0) {
       jQuery('#weather_icon').addClass('diw-cloud-hail');
     }
     else if($.inArray(weatherWeather, ['Rain Ice Pellets','Light Rain Ice Pellets','Heavy Rain Ice Pellets','Drizzle Ice Pellets','Light Drizzle Ice Pellets','Heavy Drizzle Ice Pellets','Ice Pellets Rain','Light Ice Pellets Rain','Heavy Ice Pellets Rain','Ice Pellets Drizzle','Light Ice Pellets Drizzle','Heavy Ice Pellets Drizzle']) >= 0) {
@@ -101,7 +101,6 @@ weatherFn = function(url) {
 }
 
 jQuery.getJSON(flowAPI, function (json) {
-  console.log('in the function');
   var baseString = json.value.timeSeries[0]
   var createTime = baseString.values[0].value[0].dateTime
   var locationName = baseString.sourceInfo.siteName
@@ -173,7 +172,3 @@ jQuery.getJSON(flowAPI, function (json) {
       jQuery('#gauge').addClass('success');
     }
 })
-
-
-
-

@@ -42,7 +42,6 @@ jQuery(document).ready(function() {
   });
 
   jQuery(".icon-calendar").click(function() {
-    console.log("Cal Button Clicked");
     var menuheight = jQuery(".fixed_nav").height();
     jQuery('html, body').animate({
         scrollTop: jQuery("#cal-top").offset().top -menuheight }, 2000);
@@ -102,8 +101,6 @@ jQuery(window).scroll(function() {
 function pageContentOffset() {
   var heroheight = jQuery(".fixed_img_container > img").height();
   var pushheight = (heroheight / 2) - 70;
-  console.log(heroheight);
-  console.log(pushheight);
   jQuery('.river_title h1').css('margin-top',pushheight );
   jQuery('.sliding_content_container').css('margin-top',pushheight );
 }

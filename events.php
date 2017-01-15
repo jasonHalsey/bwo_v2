@@ -11,7 +11,7 @@ Template Name: Events
 
   <h3 class="page_title"><?php the_title();?></h3> 
   
-  <h3 class="page_subtitle">Come See What You Can Learn</h3>
+  <h3 class="page_subtitle">Connection. Education. Conservation.</h3>
 
   <a class="icon-calendar"></a>
 

@@ -398,14 +398,17 @@ h6.species_title{
 
 .fixed_img_container{
   position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    background-color: yellow;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
   img{
     width:100%;
     height:auto;
+  }
+  @media only screen and (max-width: 40em) {
+    position: relative;
+    display:block;
   }
 }
 
@@ -417,6 +420,12 @@ h6.species_title{
     text-align: center;
     text-transform: uppercase;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    @media only screen and (max-width: 1050px) {
+      visibility: hidden;
+    }
+    @media only screen and (max-width: 40em) {
+      display:none;
+    }
   }
 }
 .sliding_content_container {
@@ -424,6 +433,5 @@ h6.species_title{
   background-color: #FFF;
   width:100%!important;
   max-width: 100%!important;
-  padding: 0 2.0em!important;
 }
 

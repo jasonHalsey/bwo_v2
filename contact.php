@@ -4,13 +4,15 @@ Template Name: contact
 */
 get_header(); ?>
 
-<?php 
+<section class="static_img_container">
+  <?php 
   foreach(get_images_src('large','false') as $k => $i){
-    echo '<section class="interior_hero contact_archive_hero" style="background-image:url('.$i[0].');">';
+    echo '<img src="'.$i[0].'">';
     }
 ?>
 
 </section>
+
 
 <div class="row contact_carrier">
 
@@ -26,9 +28,7 @@ get_header(); ?>
 
       <div class="large-6 columns">
         <h2>Get In Touch</h2>
-          <?php echo do_shortcode("[contact-form-7 id='68' title='contact_page']"); ?>
-
-          
+          <?php echo do_shortcode("[contact-form-7 id='68' title='contact_page']"); ?>        
       </div>
     </div>
     <div class="row">
