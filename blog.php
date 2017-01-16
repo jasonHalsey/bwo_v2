@@ -50,9 +50,6 @@ Template Name: Blog
 
 <div class="large-3 medium-3 columns">
 <?php if ( is_active_sidebar( 'cat_right_1' ) ) : ?>
-    <div id="cat-sidebar" class="primary-sidebar widget-area" role="complementary">
-      <?php dynamic_sidebar( 'cat_right_1' ); ?>
-    </div><!-- #primary-sidebar -->
     <?php if ( is_active_sidebar( 'instagram_right_1' ) ) : ?>
     <div id="cat-sidebar" class="primary-sidebar widget-area" role="complementary">
       <?php dynamic_sidebar( 'instagram_right_1' ); ?>

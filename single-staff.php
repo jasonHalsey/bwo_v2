@@ -7,15 +7,15 @@ Template Name: staff_single
 
 <?php while ( have_posts() ) : the_post(); ?>
   <?php if ( is_single() ) : ?>
-     <section class="module parallax parallax-1" style="background-image: url(<?php 
-         $url = get_post_meta( $post->ID, '_cmb2_staff_image', true ); 
-         echo $url;
-        ?>)">
-        <div class="container">
-          <h1><?php the_title() ?></h1>
-        </div>
-     </section>
-<div class="row">  
+
+  <section class="fixed_img_container">
+    <img src="<?php echo get_post_meta( $post->ID, '_cmb2_staff_image', true ); ?>" />
+  </section>
+  <section class="river_title">
+    <h1><?php the_title() ?></h1>
+  </section>
+
+  <div class="sliding_content_container row">
     <div class="large-3 medium-3 columns thumb_col">
       <img src="<?php echo get_post_meta( $post->ID, '_cmb2_staff_thumb', true ); ?>"/>
     </div>
