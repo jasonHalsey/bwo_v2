@@ -11,12 +11,27 @@ body.page-template-contact{
     
   }
 }
+.static_img_container{
+  position: relative;
+  display:block;
+  width:100%;
+  img{
+    width:100%;
+    height:auto;
+  }
+}
 .contact_carrier{
   padding:2.0em;
   margin-top: -5.0em;
   background-color: #fff;
   border-top-right-radius: 0.5em;
   border-top-left-radius: 0.5em;
+  @media only screen and (max-width: 40em) {
+    margin-top: 0;
+    border-top-right-radius: 0em;
+    border-top-left-radius: 0em;
+  }
+
 }
 .interior_hero{
   margin-bottom: 0em;

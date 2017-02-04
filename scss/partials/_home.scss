@@ -218,9 +218,10 @@ div.feed_block.light{
     text-align: right;
     font-weight: 600;
     padding-right:0.75em;
-    @media only screen and (max-width: 1040px) {
-        text-align: left;
-        margin-left: 0.5em;
+    @media only screen and (max-width: 1050px) {
+        // text-align: left;
+        // margin-left: 0.5em;
+        display:none;
     }
 }
 .hero_row{

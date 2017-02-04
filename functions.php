@@ -1,5 +1,9 @@
 <?php
 
+/*  Thumbnail Support
+/* ------------------------------------ */ 
+  add_theme_support('post-thumbnails');
+
 /*  Menu Support
 /* ------------------------------------ */ 
 
@@ -428,7 +432,7 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
       ),
       array(
         'name' => __( 'Profile Image', 'cmb2' ),
-        'desc' => __( 'Upload a landscape oriented image or enter a URL.', 'cmb2' ),
+        'desc' => __( 'Upload a landscape oriented image or enter a URL. (1400px x 655px)', 'cmb2' ),
         'id'   => $prefix . 'staff_image',
         'type' => 'file',
       ),
@@ -498,26 +502,41 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
         'id'      => $prefix . 'hatches_multicheckbox',
         'type'    => 'multicheck',
         'options' => array(
-            'Midge' => __( 'Midge', 'cmb2' ),
-            'Western March Brown' => __( 'Western March Brown', 'cmb2' ),
-            'Little Olive' => __( 'Little Olive', 'cmb2' ),
-            'Brachycentrus Caddis' => __( 'Brachycentrus Caddis', 'cmb2' ),
-            'Slate Gray Dun' => __( 'Slate Gray Dun', 'cmb2' ),
-            'Pale Morning Dun' => __( 'Pale Morning Dun', 'cmb2' ),
-            'Salmon Fly' => __( 'Salmon Fly', 'cmb2' ),
-            'Rhyacophila Caddis' => __( 'Rhyacophila Caddis', 'cmb2' ),
-            'Western Green Drake' => __( 'Western Green Drake', 'cmb2' ),
-            'Brown Drake' => __( 'Brown Drake', 'cmb2' ),
-            'Small Western Drake' => __( 'Small Western Drake', 'cmb2' ),
-            'Spotted Sedge' => __( 'Spotted Sedge', 'cmb2' ),
-            'Slate Cream Dun' => __( 'Slate Cream Dun', 'cmb2' ),
-            'Western Red Quill' => __( 'Western Red Quill', 'cmb2' ),
-            'Speckle Wing Quill' => __( 'Speckle Wing Quill', 'cmb2' ),
-            'Western Gray Drake' => __( 'Western Gray Drake', 'cmb2' ),
-            'Trico ' => __( 'Trico ', 'cmb2' ),
-            'Blue Winged Olive' => __( 'Blue Winged Olive', 'cmb2' ),
-            'Mahogany Dun' => __( 'Mahogany Dun', 'cmb2' ),
-            'Tiny BWO' => __( 'Tiny BWO', 'cmb2' ),
+            
+            'Blue Winged Olive'  => __( 'Blue Winged Olive', 'cmb2' ),
+            'Midge'  => __( 'Midge', 'cmb2' ),
+            'Grannom'  => __( 'Grannom', 'cmb2' ),
+            'Rhyacophila Caddis'  => __( 'Rhyacophila Caddis', 'cmb2' ),
+            'Hydropsyche Caddis'  => __( 'Hydropsyche Caddis', 'cmb2' ),
+            'Mahogany Dun'  => __( 'Mahogany Dun', 'cmb2' ),
+            'Pale Morning Dun'  => __( 'Pale Morning Dun', 'cmb2' ),
+            'Pale Evening Dun'  => __( 'Pale Evening Dun', 'cmb2' ),
+            'October Caddis'  => __( 'October Caddis', 'cmb2' ),
+            'Scud'  => __( 'Scud', 'cmb2' ),
+            'Salmonfly'  => __( 'Salmonfly', 'cmb2' ),
+            'Golden Stonefly'  => __( 'Golden Stonefly', 'cmb2' ),
+            'Little Yellow Sally'  => __( 'Little Yellow Sally', 'cmb2' ),
+            'Skwala'  => __( 'Skwala', 'cmb2' ),
+            'Green Drake'  => __( 'Green Drake', 'cmb2' ),
+            'March Brown'  => __( 'March Brown', 'cmb2' ),
+            'Cinygmula'  => __( 'Cinygmula', 'cmb2' ),
+            'Sculpin'  => __( 'Sculpin', 'cmb2' ),
+            'Baitfish'  => __( 'Baitfish', 'cmb2' ),
+            'Leech'  => __( 'Leech', 'cmb2' ),
+            'Flav'  => __( 'Flav', 'cmb2' ),
+            'Ant'  => __( 'Ant', 'cmb2' ),
+            'Flying Ant'  => __( 'Flying Ant', 'cmb2' ),
+            'Beetle'  => __( 'Beetle', 'cmb2' ),
+            'Mckenzie Caddis'  => __( 'Mckenzie Caddis', 'cmb2' ),
+            'Little Black Stone'  => __( 'Little Black Stone', 'cmb2' ),
+            'Callibaetis'  => __( 'Callibaetis', 'cmb2' ),
+            'Damsel'  => __( 'Damsel', 'cmb2' ),
+            'Chironomid'  => __( 'Chironomid', 'cmb2' ),
+            'Travelling Sedge'  => __( 'Travelling Sedge', 'cmb2' ),
+            'Egg'  => __( 'Egg', 'cmb2' ),
+            'Waterboatman'  => __( 'Waterboatman', 'cmb2' ),
+            'Dragonfly'  => __( 'Dragonfly', 'cmb2' ),
+            'Cranefly'  => __( 'Cranefly', 'cmb2' ),
         )
       ),
       array(
@@ -564,7 +583,7 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
       ),
 			array(
 				'name' => __( 'Profile Image', 'cmb2' ),
-				'desc' => __( 'Upload an image or enter a URL.', 'cmb2' ),
+				'desc' => __( 'Upload an image or enter a URL. (1400px x 655px)', 'cmb2' ),
 				'id'   => $prefix . 'report_image',
 				'type' => 'file',
 			)

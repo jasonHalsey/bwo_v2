@@ -42,7 +42,6 @@ jQuery(document).ready(function() {
   });
 
   jQuery(".icon-calendar").click(function() {
-    console.log("Cal Button Clicked");
     var menuheight = jQuery(".fixed_nav").height();
     jQuery('html, body').animate({
         scrollTop: jQuery("#cal-top").offset().top -menuheight }, 2000);
@@ -69,6 +68,7 @@ jQuery(document).ready(function() {
 
   moveCalNav();
   pageTitleOffset();
+  pageContentOffset()
 }); //End Main Doc Ready
 
 
@@ -78,6 +78,7 @@ jQuery(window).scroll(function(){
 
 jQuery(window).resize(function(){
     pageTitleOffset();
+    pageContentOffset()
 });
 
 jQuery(window).scroll(function() {
@@ -95,6 +96,14 @@ jQuery(window).scroll(function() {
     }
   }
 });
+
+// River Report Hero Sizing
+function pageContentOffset() {
+  var heroheight = jQuery(".fixed_img_container > img").height();
+  var pushheight = (heroheight / 2) - 70;
+  jQuery('.river_title h1').css('margin-top',pushheight );
+  jQuery('.sliding_content_container').css('margin-top',pushheight );
+}
 
 // Move Calendar's Navigation 
 function moveCalNav() {

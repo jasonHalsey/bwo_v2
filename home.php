@@ -77,7 +77,7 @@ get_header(); ?>
   <h2><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2> 
   <span class="entry-date"><?php echo get_the_modified_date(); ?></span>
    <div class="report_block">
-    <?php $report = get_post_meta( $post->ID, '_cmb2_guide_report', true ); ?>
+    <?php $report = get_post_meta( $post->ID, '_cmb2_river_description', true ); ?>
     <?php
       if (!empty($report)) {
       echo wp_trim_words($report, 55 ); 
