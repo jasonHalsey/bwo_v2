@@ -63,10 +63,6 @@ function cat_widgets_init() {
 add_action( 'widgets_init', 'cat_widgets_init' );
 
 
-/*  Post Thumbnail Support
-/* ------------------------------------ */ 
-  add_theme_support( 'post-thumbnails' ); 
-
 /*  Remove Admin Bar
 /* ------------------------------------ */ 
 	add_filter('show_admin_bar', '__return_false');
