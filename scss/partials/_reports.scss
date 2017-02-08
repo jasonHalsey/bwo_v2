@@ -88,7 +88,7 @@ h3.river_sub_title{
   /* Anchor will cover the whole item by default */
   /* For some effects it will show as a button */
   figure figcaption > a {
-    z-index: 1000;
+    z-index: 20;
     text-indent: 200%;
     white-space: nowrap;
     font-size: 0;
@@ -412,6 +412,13 @@ h6.species_title{
   }
 }
 
+//No image species *remove when images are created
+li.land_locked_atlantic_salmon{
+  img{display:none}
+}
+li.kokanee{
+  img{display:none}
+}
 .river_title{
   h1{
     color: rgba(255, 255, 255, 0.8);

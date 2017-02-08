@@ -481,6 +481,8 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
             'coastal_cutthroat_trout' => __( 'Coastal Cutthroat Trout', 'cmb2' ),
             'dolphin' => __( 'Dolphin', 'cmb2' ),
             'golden_trout' => __( 'Golden Trout', 'cmb2' ),
+            'kokanee' => __('Kokanee', 'cmb2'),
+            'land_locked_atlantic_salmon' => __('Land-locked Atlantic Salmon', 'cmb2'),
             'largemouth_bass' => __( 'Largemouth Bass', 'cmb2' ),
             'permit' => __( 'Permit', 'cmb2' ),
             // 'rainbow_trout' => __( 'Rainbow Trout', 'cmb2' ),

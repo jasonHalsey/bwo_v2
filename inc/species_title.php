@@ -22,6 +22,12 @@ switch ($term) {
     case "golden_trout":
         echo "Golden Trout";
         break;
+    case "kokanee":
+        echo "Kokanee";
+        break;
+    case "land_locked_atlantic_salmon":
+        echo "Land-Locked Atlantic Salmon";
+        break;
     case "largemouth_bass":
         echo "Largemouth Bass";
         break;
