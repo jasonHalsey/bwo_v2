@@ -468,6 +468,13 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
         'type' => 'checkbox',
       ),
 
+      array(
+        'name'    => __( 'Is this the Crooked River', 'cmb2' ),
+        'desc'  => __( 'Checking box pulls in Crooked River Flow from USBR ', 'cmb2' ),
+        'id'   => $prefix . 'crooked_river',
+        'type' => 'checkbox',
+      ),
+
 			array(
 	      'name' => __( 'Species', 'cmb2' ),
 				'desc' => __( 'Currently Targeted Species ', 'cmb2' ),

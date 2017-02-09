@@ -18,6 +18,7 @@ Template Name: river_report
     $hatches = get_post_meta( $post->ID, '_cmb2_hatches_multicheckbox', true );
     $hotFlies = get_post_meta( $post->ID, '_cmb2_hot_flies', true );
     $subtitle = get_post_meta( $post->ID, '_cmb2_sub_title', true );
+    $crooked_river = get_post_meta( $post->ID, '_cmb2_crooked_river', true );
   ?>
   
   <?php
@@ -82,10 +83,14 @@ Template Name: river_report
                 ?>
                   <li class="list-group-item ">River Gauge:&nbsp;<span class="sitename">Loading...</span></li>
                   <li class="list-group-item ">Flow:&nbsp;<span class="flowNum">Loading...</span></li>
+                  <li class="list-group-item ">Recorded At:&nbsp;<span class="createTime">Loading...</span></li>
+                <?php
+                  } elseif (!empty($crooked_river)){ ?>
+                  <?php include(locate_template('inc/crooked_flow.php')); ?>
                 <?php
                   }
                 ?>
-                <li class="list-group-item ">Recorded At:&nbsp;<span class="createTime">Loading...</span></li>
+                
               </ul>
               <div class="card-block map-block">
                 <div id='map-one' class='map'>Loading Map... </div>
