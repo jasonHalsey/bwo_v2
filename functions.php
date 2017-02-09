@@ -486,7 +486,7 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
             'largemouth_bass' => __( 'Largemouth Bass', 'cmb2' ),
             'permit' => __( 'Permit', 'cmb2' ),
             // 'rainbow_trout' => __( 'Rainbow Trout', 'cmb2' ),
-            'rainbow_trout_redband' => __( 'Rainbow Trout', 'cmb2' ),
+            'rainbow_trout_2' => __( 'Rainbow Trout', 'cmb2' ),
             'redfish' => __( 'Redfish', 'cmb2' ),
             'smallmouth_bass' => __( 'Smallmouth Bass', 'cmb2' ),
             'snakeriver_finespotted_cutthroat_trout' => __( 'Snakeriver Finespotted Cutthroat', 'cmb2' ),

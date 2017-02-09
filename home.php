@@ -33,7 +33,7 @@ get_header(); ?>
           <figcaption>
             <h2>Guided <span>Trips</span></h2>
             <p>Book a trip to get your adventure started</p>
-            <a href="http://www.deepcanyonoutfitters.com">View more</a>
+            <a href="<?php echo home_url( '/guided-trips' ); ?>">View more</a>
           </figcaption>     
         </figure>
       </div>
@@ -51,7 +51,7 @@ get_header(); ?>
 
       <div class="large-3 medium-6 small-12 columns">
         <figure class="effect-oscar">
-          <img src="<?php echo bloginfo('template_directory'); ?>/images/events_bg_2.jpg" alt="Fishing Events"/>
+          <img src="<?php echo bloginfo('template_directory'); ?>/images/Classes.jpg" alt="Fishing Events"/>
           <figcaption>
             <h2 class="lng_title">Classes <span class="han-extra">&#33;</span> <span>Events</span></h2>
             <p>See What's Going On</p>
