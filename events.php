@@ -13,7 +13,7 @@ Template Name: Events
   
   <h3 class="page_subtitle">Connection. Education. Conservation.</h3>
 
-  <a class="icon-calendar"></a>
+  <a class="icon-calendar class-nav"></a>
 
   <?php
     $mypost = array( 'post_type' => 'event','orderby' => 'menu_order');

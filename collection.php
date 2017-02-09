@@ -50,66 +50,66 @@ Template Name: reels - product collection
         node: document.getElementById('collection-component-8f7b84e0ecb'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
-  "product": {
-    "buttonDestination": "modal",
-    "variantId": "all",
-    "contents": {
-      "variantTitle": false,
-      "options": false,
-      "description": false,
-      "buttonWithQuantity": false,
-      "quantity": false
-    },
-    "text": {
-      "button": "VIEW PRODUCT"
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px"
-        }
-      }
-    }
-  },
-  "cart": {
-    "contents": {
-      "button": true
-    },
-    "styles": {
-      "footer": {
-        "background-color": "#ffffff"
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "variantTitle": false,
-      "buttonWithQuantity": true,
-      "button": false,
-      "quantity": false
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      }
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
-      }
-    }
-  }
-}
+		  "product": {
+		    "buttonDestination": "modal",
+		    "variantId": "all",
+		    "contents": {
+		      "variantTitle": false,
+		      "options": false,
+		      "description": false,
+		      "buttonWithQuantity": false,
+		      "quantity": false
+		    },
+		    "text": {
+		      "button": "VIEW PRODUCT"
+		    },
+		    "styles": {
+		      "product": {
+		        "@media (min-width: 601px)": {
+		          "max-width": "calc(25% - 20px)",
+		          "margin-left": "20px",
+		          "margin-bottom": "50px"
+		        }
+		      }
+		    }
+		  },
+		  "cart": {
+		    "contents": {
+		      "button": true
+		    },
+		    "styles": {
+		      "footer": {
+		        "background-color": "#ffffff"
+		      }
+		    }
+		  },
+		  "modalProduct": {
+		    "contents": {
+		      "variantTitle": false,
+		      "buttonWithQuantity": true,
+		      "button": false,
+		      "quantity": false
+		    },
+		    "styles": {
+		      "product": {
+		        "@media (min-width: 601px)": {
+		          "max-width": "100%",
+		          "margin-left": "0px",
+		          "margin-bottom": "0px"
+		        }
+		      }
+		    }
+		  },
+		  "productSet": {
+		    "styles": {
+		      "products": {
+		        "@media (min-width: 601px)": {
+		          "margin-left": "-20px"
+		        }
+		      }
+		    }
+		  }
+		}
       });
     });
   }
