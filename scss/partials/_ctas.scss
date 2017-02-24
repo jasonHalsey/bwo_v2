@@ -25,7 +25,6 @@ figure img {
   display: block;
   width:100%;
   height: auto;
-  // min-height: 100%;
   max-width: 100%;
   opacity: 0.8;
 }
@@ -110,7 +109,6 @@ figure.effect-oscar img {
 }
 
 figure.effect-oscar figcaption {
-  // padding: 3em;
   background-color: rgba(58,52,42,0.7);
   -webkit-transition: background-color 0.35s;
   transition: all linear 0.35s;
@@ -133,13 +131,6 @@ figure.effect-oscar h2 {
 
 figure.effect-oscar h2.lng_title{
   @include vertical-align();
-  // margin: -20% 0 10px 0;
-  //   @media only screen and (max-width: 2000px) {
-  //     margin: -20% 0 10px 0;
-  //   }
-  //   @media only screen and (min-width: 1500px) {
-  //     margin: -30% 0 10px 0;
-  //   }
 }
 
 figure.effect-oscar figcaption::before,

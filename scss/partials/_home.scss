@@ -39,7 +39,6 @@ h3.page_title{
     position:relative;
     font-size:4.5em;
     line-height: 1.0em;
-    // margin-left:1.0%;
     width:100%;
     margin-top: 1%; 
     @media only screen and (max-width: 1040px) {
@@ -54,7 +53,6 @@ h3.page_subtitle{
     font-size: 1.50em;
     font-style: italic;
     color: $grain;
-    // margin-left:1.0%;
     width:50%;
     margin-bottom: 2%; 
     background-color: $blackboard;
@@ -252,6 +250,72 @@ div.feed_block.light{
     background-repeat: no-repeat;
     background-position: center center;
 }
+.store_cta_row{
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: calc(10vh);
+    background-image: url("../images/topoBG.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .store_cta_message{
+        max-width: 1600px;
+        width:100%;
+        height: calc(10vh);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 1.5em;
+        @media only screen and (max-width: 40em) {
+            font-size: 0.9em;
+        }
+        .sh_cta_title{
+            width:25%;
+            color:#fff;
+            border-right:1px solid #fff;
+            text-align: right;
+            padding-right: 0.5em;
+            line-height: 1;
+            span{
+                font-weight: 700;
+                display: block;
+            }
+            @media only screen and (max-width: 40em) {
+                display:none;
+            }
+        }   
+        .sh_cta_msg{
+            color:#fff;
+            text-align: center; 
+            width:50%;
+            @media only screen and (max-width: 40em) {
+                width:60%;
+                text-align: left;
+                padding-left:0.75em;
+            }
+        }
+        .sh_cta_btn{
+            width:25%;
+            @media only screen and (max-width: 40em) {
+                width:40%;
+                text-align: center;
+            }
+            button{
+                border: 1px solid #fff;
+                color:#fff;
+                padding: 0.5em 1.0em;
+                transition: background-color 0.5s ease;
+                &:hover{
+                    background-color: rgba(97,196,255,0.5);
+                }
+            }
+        }
+    }
+}
+
 body.interiror{
     ul.instagram-pics{
         list-style-type: none;
@@ -266,6 +330,7 @@ body.interiror{
 }
 
 div.insta_footer{    
+    margin-top: 2.0em;
     ul.instagram-pics{
         list-style-type: none;
         margin: 0;

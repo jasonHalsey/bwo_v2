@@ -60,6 +60,15 @@ get_header(); ?>
         </figure>
       </div>
     </div>
+
+    <div class="store_cta_row">
+      <div class="large-12 store_cta_message">
+        <div class="sh_cta_title"><span>SHOP</span>Confluence</div>
+        <div class="sh_cta_msg">Get The Right Gear For Your Next Adventure</div>
+        <div class="sh_cta_btn"><a href="https://confluence-fly-shop.myshopify.com"><button>SHOP NOW</button></a></div>
+      </div>
+    </div>
+
       
 <div class="row feed_row">
   <?php query_posts( array(
@@ -96,6 +105,14 @@ get_header(); ?>
 <?php endwhile; ?>   
 </div><!-- END FEED_ROW -->
 
+<div class="store_cta_row">
+      <div class="large-12 store_cta_message">
+        <div class="sh_cta_title"><span>SHOP</span>Confluence</div>
+        <div class="sh_cta_msg">Get The Right Gear For Your Next Adventure</div>
+        <div class="sh_cta_btn"><a href="https://confluence-fly-shop.myshopify.com"><button>SHOP NOW</button></a></div>
+      </div>
+    </div>
+    
 <div class="insta_footer">
   <?php if ( is_active_sidebar( 'instagram_footer_1' ) ) : ?>
           <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
