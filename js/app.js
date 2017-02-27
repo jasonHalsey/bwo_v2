@@ -1,9 +1,7 @@
 jQuery(document).foundation();
 
 $(window).on("load", function() {
-
-pageContentOffset();
-
+  pageContentOffset();
 });
 
 jQuery(document).ready(function() {
@@ -82,7 +80,6 @@ jQuery(window).scroll(function() {
 function pageContentOffset() {
   var heroheight = jQuery(".fixed_img_container > img").height();
   var pushheight = (heroheight / 2) - 70;
-  // jQuery('.river_title h1').css('margin-top',pushheight );
   jQuery('.river_title h1').css({
     marginTop : pushheight,
     transition : 'margin-top 1s ease-in-out'
