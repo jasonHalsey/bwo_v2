@@ -9,8 +9,8 @@ Template Name: calendar event
   <?php if ( is_single() ) : ?>
   <?php
     $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-    $default = site_url('/wp-content/themes/bwo/images/default_bg.jpg');
-    if (!isset($url)) {
+    $default = site_url('/wp-content/themes/bwo_v2/images/default_bg.jpg');
+    if (isset($url)) {
       $bg_image = $url;
     } else {
       $bg_image = $default;
@@ -28,8 +28,7 @@ Template Name: calendar event
       <div class="large-12 medium-12 columns"> 
       <h4><?php the_title(); ?></h4>
             <?php the_content() ?>
-        </div>
-            
+        </div>            
     </div>
   </section>
 </div>
