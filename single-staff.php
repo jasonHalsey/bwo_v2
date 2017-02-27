@@ -26,5 +26,4 @@ Template Name: staff_single
   <?php endif; // is_single() ?>
  <?php endwhile; ?>
 </div>
-
 <?php get_footer(); ?>

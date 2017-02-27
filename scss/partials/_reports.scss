@@ -398,6 +398,7 @@ h6.species_title{
 
 .fixed_img_container{
   position: fixed;
+  min-height:100px;
   top: 0;
   left: 0;
   right: 0;
@@ -440,5 +441,6 @@ li.kokanee{
   background-color: #FFF;
   width:100%!important;
   max-width: 100%!important;
+  margin-top: 250px;
 }
 

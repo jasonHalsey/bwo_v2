@@ -1,31 +1,13 @@
 jQuery(document).foundation();
 
-jQuery(function($) {
-  jQuery("#rss-feeds").rss("feed://www.fpc.org/rss/rssAdultCounts.aspx",
-      {
-        entryTemplate: '<p class="rss_title">Ending on {date}</p><p class="speciesCount">{shortBodyPlain}</p>',
-        layoutTemplate: "<div class='feed-container'>{entries}</div>",
-        success: function(){
-          var initialString = jQuery('p.speciesCount').text();
-          var dataArray = initialString .split(";");
-          var arr = $.makeArray( dataArray );
-          var steelhead =  arr[2];
-          var wild_steelhead =  arr[3];
-          //Replace Full RSS with just Steelhead count @ Bonneville Dam
-          jQuery("p.speciesCount").html("<ul><li>" + steelhead + "</li><li>" + wild_steelhead + "</li></ul>");
-          jQuery("h3.rss_title").unwrap();
+$(window).on("load", function() {
 
-        },
-        dateFormat: 'M/D/YYYY',
-        limit: 100,
-        filterLimit: 10,
-        filter: function(entry, tokens) {
-        return tokens.title.indexOf('BONNEVILLE') > -1
-      }
-    })
-})
+pageContentOffset();
+
+});
 
 jQuery(document).ready(function() {
+
 
   if (!jQuery('body').hasClass('home')){
     jQuery('body').addClass('interior');
@@ -68,7 +50,7 @@ jQuery(document).ready(function() {
 
   moveCalNav();
   pageTitleOffset();
-  pageContentOffset()
+  
 }); //End Main Doc Ready
 
 
@@ -150,5 +132,28 @@ function pageTitleOffset() {
     );
   });
 
+jQuery(function($) {
+  jQuery("#rss-feeds").rss("feed://www.fpc.org/rss/rssAdultCounts.aspx",
+      {
+        entryTemplate: '<p class="rss_title">Ending on {date}</p><p class="speciesCount">{shortBodyPlain}</p>',
+        layoutTemplate: "<div class='feed-container'>{entries}</div>",
+        success: function(){
+          var initialString = jQuery('p.speciesCount').text();
+          var dataArray = initialString .split(";");
+          var arr = $.makeArray( dataArray );
+          var steelhead =  arr[2];
+          var wild_steelhead =  arr[3];
+          //Replace Full RSS with just Steelhead count @ Bonneville Dam
+          jQuery("p.speciesCount").html("<ul><li>" + steelhead + "</li><li>" + wild_steelhead + "</li></ul>");
+          jQuery("h3.rss_title").unwrap();
 
+        },
+        dateFormat: 'M/D/YYYY',
+        limit: 100,
+        filterLimit: 10,
+        filter: function(entry, tokens) {
+        return tokens.title.indexOf('BONNEVILLE') > -1
+      }
+    })
+})
 
