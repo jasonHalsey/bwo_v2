@@ -46,7 +46,13 @@ switch ($term) {
     case "smallmouth_bass":
         echo "Smallmouth Bass";
         break;
+    case "rainbow_trout_1":
+        echo "Rainbow Trout";
+        break;
     case "rainbow_trout_2":
+        echo "Rainbow Trout";
+        break;
+    case "rainbow_trout_3":
         echo "Rainbow Trout";
         break;
     case "snakeriver_finespotted_cutthroat_trout":

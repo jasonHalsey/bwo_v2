@@ -3,6 +3,11 @@
   position:fixed;
   z-index:999;
   top:0;
+  @media only screen and (max-width: 40em) {
+    position:relative;
+  }
+  
+  
 }
 
 .menu-icon{
