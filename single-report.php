@@ -49,24 +49,12 @@ Template Name: river_report
             <div class="card">
               
               <div class="card-block">
-                <?php
-                  if (!empty($usgs_site)) {
-                ?>
-                  <h2 class="usgs_river_name">Loading...</h2>
-                  <?php if (!empty($subtitle)){ ?>
-                    <h3 class="river_sub_title"><?php echo $subtitle ?></h3> 
-                  <?php } ?> 
-                <?php
-                  }else {
-                ?>
+               
                   <h2 class="river_name"><?php the_title(); ?></h2>
                   <?php if (!empty($subtitle)){ ?>
                     <h3 class="river_sub_title"><?php echo $subtitle ?></h3> 
                   <?php } ?>
-                   
-                <?php
-                  }
-                ?>
+                  
                 <p> <?php echo get_post_meta( $post->ID, '_cmb2_river_description', true ); ?></p>
                 <h3>Guide Report</h3>
                   <span><?php the_modified_date(); ?></span>
