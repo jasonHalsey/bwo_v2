@@ -1,7 +1,10 @@
 /* ============================================================
   ARCHIVE PAGE
 ============================================================ */
-.interior_hero{
+p{
+  margin-bottom: 0em;
+  }
+  .interior_hero{
   margin-bottom: 0em;
 }
 .river_archive_hero{
@@ -312,12 +315,10 @@ section.module:last-child {
   margin-bottom: 0;
 }
 section.module h2 {
-  margin-bottom: 40px;
   font-family: "Roboto Slab", serif;
   font-size: 30px;
 }
 section.module p {
-  margin-bottom: 40px;
   font-size: 16px;
   font-weight: 300;
 }
@@ -395,7 +396,7 @@ h6.species_title{
   }
   p{
     background-color: rgba(255,255,255,0.5);
-    padding:1.0em;
+    padding:0.5em;
   }
 }
 

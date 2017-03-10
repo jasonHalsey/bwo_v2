@@ -54,11 +54,11 @@ Template Name: river_report
                   <?php if (!empty($subtitle)){ ?>
                     <h3 class="river_sub_title"><?php echo $subtitle ?></h3> 
                   <?php } ?>
-                  
-                <p> <?php echo get_post_meta( $post->ID, '_cmb2_river_description', true ); ?></p>
+                 
+                <?php echo wpautop(get_post_meta( $post->ID, '_cmb2_river_description', true )); ?>
                 <h3>Guide Report</h3>
                   <span><?php the_modified_date(); ?></span>
-                <p> <?php echo get_post_meta( $post->ID, '_cmb2_guide_report', true ); ?></p>
+                <p> <?php echo wpautop(get_post_meta( $post->ID, '_cmb2_guide_report', true )); ?></p>
                 <h3>Weather</h3>
                 <div id="weather_icon" class="card-img-top"> </div>
                 <p class="weather_text card-text">Loading...</p>

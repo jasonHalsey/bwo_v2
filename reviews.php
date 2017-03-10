@@ -22,7 +22,7 @@ Template Name: reviews
     ?>
     <?php while ( $loop->have_posts() ) : $loop->the_post();?>
       <div class="testimonial-wrap">
-        <p class="testimonial_quote"><?php echo get_post_meta( $post->ID, '_cmb2_client_quote', true ); ?></p>
+        <p class="testimonial_quote"><?php echo wpautop(get_post_meta( $post->ID, '_cmb2_client_quote', true )); ?></p>
         <p class="testimonial_name">-&nbsp;<?php echo get_post_meta( $post->ID, '_cmb2_client_name', true ); ?></p>
       </div>
     <?php endwhile; ?>

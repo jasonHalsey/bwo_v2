@@ -21,7 +21,7 @@ Template Name: staff_single
     </div>
     <div class="large-9 medium-9 columns bio_col">
       <h1><?php the_title() ?></h1>
-      <p class="bio_block"><?php echo get_post_meta( $post->ID, '_cmb2_bio', true ); ?></p>
+      <p class="bio_block"><?php echo wpautop(get_post_meta( $post->ID, '_cmb2_bio', true )); ?></p>
     </div>
   <?php endif; // is_single() ?>
  <?php endwhile; ?>

@@ -908,15 +908,6 @@ function my_list_images($list_images, $cpt){
 }
 
 
-function get_attachment_id_from_src ($value) {
-  global $wpdb;
-  $query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$value'";
-  $id = $wpdb->get_var($query);
-  return $id;
-}
-
-
-
 /**
  * Add Shopify Item URL fields to media uploader
  *

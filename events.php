@@ -22,7 +22,7 @@ Template Name: Events
   <?php while ( $loop->have_posts() ) : $loop->the_post();?>
       <div class="class_container">          
         <h4><?php the_title() ?></h4>
-        <p><?php echo get_post_meta( $post->ID, '_cmb2_description', true ); ?></p>
+        <p><?php echo wpautop(get_post_meta( $post->ID, '_cmb2_description', true )); ?></p>
         <p>Location:&nbsp;<?php echo get_post_meta( $post->ID, '_cmb2_location', true ); ?></p>
         <?php $event_reserve = get_post_meta( $post->ID, '_cmb2_cost', true ); 
           if($event_reserve === 'book_it'){
