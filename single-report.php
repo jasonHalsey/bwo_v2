@@ -16,7 +16,7 @@ Template Name: river_report
     $zoomLevel = $zoomLevelset ?: 18;
     $steelheadCount = get_post_meta( $post->ID, '_cmb2_bonn_steelhead', true );
     $hatches = get_post_meta( $post->ID, '_cmb2_hatches_multicheckbox', true );
-    $hotFlies = get_post_meta( $post->ID, '_cmb2_hot_flies', true );
+    $hotFlies = get_post_meta( $post->ID, '_cmb2_fly_image', true );
     $subtitle = get_post_meta( $post->ID, '_cmb2_sub_title', true );
     $crooked_river = get_post_meta( $post->ID, '_cmb2_crooked_river', true );
   ?>
@@ -120,11 +120,33 @@ Template Name: river_report
             if (!empty($hotFlies)) {
           ?>
           <h3>Hot Flies</h3>                     
-          <div class="hot_flies">
-            <h5>
-              <?php echo $hotFlies ?>
-            </h5>
-          </div> 
+          <dl class="accordion">
+                <?php
+                  $entrie_fly = get_post_meta( get_the_ID(), '_cmb2_fly_image', true ); 
+                  foreach( $entrie_fly as $key => $person ) { 
+                    foreach( $person as $attribute => $value ) {
+                    $image = get_post($attribute);
+                    $image_title = $image->post_title;
+                    $image_shopify = $image->be_shopify_url;
+                ?>
+                
+                  <dt><a href=""><?php echo($image_title); ?><span class="fly_btn icon-circle-down"></span></a></dt>
+                  <?php 
+                    if (!empty($image_shopify)) {
+                  ?>
+                  <dd>
+                    <a href="<?php echo($image_shopify); ?>">
+                      <img src="<?php echo $value ?>" />
+                      <div class="overlay">
+                        <div class="text">Buy It<br />Now</div>
+                      </div>
+                  </a></dd>
+                  <?php }else { ?>
+                  <dd><img src="<?php echo $value ?>" /></dd>
+                  <?php } ?>
+                <?php } }
+                ?>
+              </dl> 
           <?php
             }
           ?> 

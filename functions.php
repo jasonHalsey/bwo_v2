@@ -63,6 +63,7 @@ function cat_widgets_init() {
 add_action( 'widgets_init', 'cat_widgets_init' );
 
 
+
 /*  Remove Admin Bar
 /* ------------------------------------ */ 
 	add_filter('show_admin_bar', '__return_false');
@@ -587,6 +588,14 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
         'type'    => 'wysiwyg',
         'options' => array( 'textarea_rows' => 5, ),
       ),
+      array(
+        'name' => __( 'Fly Images', 'cmb2' ),
+        'desc' => __( 'Upload an image or enter a URL. (1400px x 655px)', 'cmb2' ),
+        'id'   => $prefix . 'fly_image',
+        'repeatable'  => true,
+        'type' => 'file_list',
+      ),
+
 			array(
 				'name' => __( 'Profile Image', 'cmb2' ),
 				'desc' => __( 'Upload an image or enter a URL. (1400px x 655px)', 'cmb2' ),
@@ -597,6 +606,36 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
 	);
 	return $meta_boxes;
 }
+
+
+
+/**
+ * Sample template tag function for outputting a cmb2 file_list
+ *
+ * @param  string  $file_list_meta_key The field meta key. ('wiki_test_file_list')
+ * @param  string  $img_size           Size of image to show
+ */
+function cmb2_output_file_list( $file_list_meta_key, $img_size = 'medium' ) {
+
+    // Get the list of files
+    $files = get_post_meta( get_the_ID(), $file_list_meta_key, 1 );
+
+    echo '<div class="file-list-wrap">';
+    // Loop through them and output an image
+    foreach ( (array) $files as $attachment_id => $attachment_url ) {
+        echo '<div class="file-list-image">';
+        echo wp_get_attachment_image_src($attachment_url);
+        echo wp_get_attachment_image( $attachment_url);
+        echo '</div>';
+    }
+    echo '</div>';
+}
+
+
+
+
+
+
 
 
 /*  Breadcrumbs
@@ -867,5 +906,56 @@ function my_list_images($list_images, $cpt){
         );
     return $picts;
 }
+
+
+function get_attachment_id_from_src ($value) {
+  global $wpdb;
+  $query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$value'";
+  $id = $wpdb->get_var($query);
+  return $id;
+}
+
+
+
+/**
+ * Add Shopify Item URL fields to media uploader
+ *
+ * @param $form_fields array, fields to include in attachment form
+ * @param $post object, attachment record in database
+ * @return $form_fields, modified form fields
+ */
+ 
+function be_attachment_field_credit( $form_fields, $post ) {
+
+
+  $form_fields['be-shopify-url'] = array(
+    'label' => 'Shopify Item URL',
+    'input' => 'text',
+    'value' => get_post_meta( $post->ID, 'be_shopify_url', true ),
+    'helps' => 'Add Shopify Item URL',
+  );
+
+  return $form_fields;
+}
+
+add_filter( 'attachment_fields_to_edit', 'be_attachment_field_credit', 10, 2 );
+
+/**
+ * Save values of Shopify URL in media uploader
+ *
+ * @param $post array, the post data for database
+ * @param $attachment array, attachment fields from $_POST form
+ * @return $post array, modified post data
+ */
+
+function be_attachment_field_credit_save( $post, $attachment ) {
+  
+  if( isset( $attachment['be-shopify-url'] ) )
+update_post_meta( $post['ID'], 'be_shopify_url', esc_url( $attachment['be-shopify-url'] ) );
+
+  return $post;
+}
+
+add_filter( 'attachment_fields_to_save', 'be_attachment_field_credit_save', 10, 2 );
 
 ?>

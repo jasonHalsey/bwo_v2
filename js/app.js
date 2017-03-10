@@ -6,6 +6,35 @@ $(window).on("load", function() {
 
 jQuery(document).ready(function() {
 
+
+  function openFirstPanel(){
+    jQuery('.accordion > dt:first-child').next().addClass('active').slideDown();
+  }
+
+  (function($) {
+      
+    var allPanels = $('.accordion > dd').hide();
+    
+    openFirstPanel();
+      
+    jQuery('.accordion > dt > a').click(function() {
+        $this = $(this);
+        $target =  $this.parent().next();
+        
+      
+        if($target.hasClass('active')){
+          $target.removeClass('active').slideUp(); 
+        }else{
+          allPanels.removeClass('active').slideUp();
+          $target.addClass('active').slideDown();
+        }
+        
+      return false;
+    });
+
+  })(jQuery);
+
+
   if (!jQuery('body').hasClass('home')){
     jQuery('body').addClass('interior');
   }
