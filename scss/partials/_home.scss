@@ -72,6 +72,10 @@ h2.sidebar_title{
 ul{
     list-style: none;
 }
+li{
+    font-size: 18px;
+    font-weight: 300;
+}
 .rev_slider_wrapper{
     max-height: 97vh!important;
 }
@@ -93,7 +97,6 @@ ul{
 }
 .logo{
     width:15%;
-    height: calc(100vh);
     position: absolute;
     left: 12%;
     top: 80%;
@@ -106,7 +109,11 @@ ul{
         transform: translate(-50%, -50%);   
     }
      @media only screen and (max-width: 50em) {
-        width:50%;
+        width:25%;
+        left: 25%;
+     }
+     @media only screen and (max-width: 649px) {
+        display:none;
      }
 }
 .title_logo{

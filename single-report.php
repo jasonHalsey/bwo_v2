@@ -136,13 +136,13 @@ Template Name: river_report
                   ?>
                   <dd>
                     <a href="<?php echo($image_shopify); ?>">
-                      <img src="<?php echo $value ?>" />
+                      <img src="<?php echo $value ?>" class="hfly_image" />
                       <div class="overlay">
                         <div class="text">Buy It<br />Now</div>
                       </div>
                   </a></dd>
                   <?php }else { ?>
-                  <dd><img src="<?php echo $value ?>" /></dd>
+                  <dd><img src="<?php echo $value ?>" class="hfly_image" /></dd>
                   <?php } ?>
                 <?php } }
                 ?>

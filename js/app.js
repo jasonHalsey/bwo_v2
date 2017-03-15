@@ -14,19 +14,24 @@ jQuery(document).ready(function() {
   (function($) {
       
     var allPanels = $('.accordion > dd').hide();
+    var allArrows = $('.accordion > dt > a > span.fly_btn');
     
-    openFirstPanel();
+    // openFirstPanel();
       
     jQuery('.accordion > dt > a').click(function() {
         $this = $(this);
         $target =  $this.parent().next();
+        $arrow = $this.find('.fly_btn');
         
-      
+      console.log($this);
         if($target.hasClass('active')){
-          $target.removeClass('active').slideUp(); 
+          $target.removeClass('active').slideUp();
+          $arrow.removeClass('icon-circle-down').addClass('icon-circle-down');
         }else{
           allPanels.removeClass('active').slideUp();
+          allArrows.removeClass('icon-circle-up').addClass('icon-circle-down');
           $target.addClass('active').slideDown();
+          $arrow.addClass('icon-circle-up').removeClass('icon-circle-down');
         }
         
       return false;

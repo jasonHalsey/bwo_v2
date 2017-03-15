@@ -546,12 +546,12 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
             'Cranefly'  => __( 'Cranefly', 'cmb2' ),
         )
       ),
-      array(
-        'name'    => __( 'Hot Flies', 'cmb2' ),
-        'id'      => $prefix . 'hot_flies',
-        'type'    => 'wysiwyg',
-        'options' => array( 'textarea_rows' => 5, ),
-      ),
+      // array(
+      //   'name'    => __( 'Hot Flies', 'cmb2' ),
+      //   'id'      => $prefix . 'hot_flies',
+      //   'type'    => 'wysiwyg',
+      //   'options' => array( 'textarea_rows' => 5, ),
+      // ),
 			array(
 				'name' => __( 'USGS Gauge Number', 'cmb2' ),
 				'desc' => __( '<a href="http://waterdata.usgs.gov/or/nwis/current/?type=flow" target="_blank"> USGS Station List</a>', 'cmb2' ),
@@ -589,8 +589,8 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
         'options' => array( 'textarea_rows' => 5, ),
       ),
       array(
-        'name' => __( 'Fly Images', 'cmb2' ),
-        'desc' => __( 'Upload an image or enter a URL. (1400px x 655px)', 'cmb2' ),
+        'name' => __( 'Hot Flies', 'cmb2' ),
+        'desc' => __( 'Upload an image and be sure to enter the correct title in the Media Library', 'cmb2' ),
         'id'   => $prefix . 'fly_image',
         'repeatable'  => true,
         'type' => 'file_list',
