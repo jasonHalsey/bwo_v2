@@ -1,14 +1,11 @@
 /* ============================================================
   ARCHIVE PAGE
 ============================================================ */
-p{
-  margin-bottom: 0em;
-  }
-  .interior_hero{
+.interior_hero{
   margin-bottom: 0em;
 }
 .river_archive_hero{
-  background-image: url(../images/Metolius_bow.jpg);
+  background-image: url(../images/oregon_map.jpg);
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
@@ -91,7 +88,7 @@ h3.river_sub_title{
   /* Anchor will cover the whole item by default */
   /* For some effects it will show as a button */
   figure figcaption > a {
-    z-index: 20;
+    z-index: 1000;
     text-indent: 200%;
     white-space: nowrap;
     font-size: 0;
@@ -161,10 +158,10 @@ h3.river_sub_title{
     -webkit-transform: translate3d(0,100%,0);
     transform: translate3d(0,100%,0);
     @include breakpoint(1600px) {
-      margin: 5% 0 10px 0
+      margin: 15% 0 10px 0
     }
     @include breakpoint(639px down) {
-      margin: 0% 0 10px 0
+      margin: 30% 0 10px 0
     }
   }
 
@@ -181,20 +178,14 @@ h3.river_sub_title{
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
     @include breakpoint(1600px) {
-      margin: 0% 0 10px 0;
+      margin: 15% 0 10px 0;
     }
   }
 
   figure.effect-oscar_report h2.long_h2{
-    margin: -18% 0 10px 0;
-    @include breakpoint(1600px) {
-      margin: -8% 0 10px 0
-    }
-    @include breakpoint(639px down) {
-      margin: 0% 0 10px 0
-    }
+    margin: 0% 0 10px 0;
     &:hover{
-      margin: 0% 0 10px 0;
+      margin: 30% 0 10px 0;
     }
   }
 
@@ -271,9 +262,6 @@ div.hot_flies{
     &:hover{
       background-color: rgba($blackboard, 0.5);
     }
-    @media only screen and (max-width: 40em) {
-      width:100%;
-    }
   }
 }
 .sidebar{
@@ -315,10 +303,12 @@ section.module:last-child {
   margin-bottom: 0;
 }
 section.module h2 {
+  margin-bottom: 40px;
   font-family: "Roboto Slab", serif;
   font-size: 30px;
 }
 section.module p {
+  margin-bottom: 40px;
   font-size: 16px;
   font-weight: 300;
 }
@@ -396,55 +386,6 @@ h6.species_title{
   }
   p{
     background-color: rgba(255,255,255,0.5);
-    padding:0.5em;
+    padding:1.0em;
   }
 }
-
-.fixed_img_container{
-  position: fixed;
-  // height:100px;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  img{
-    width:100%;
-    height:auto;
-  }
-  @media only screen and (max-width: 40em) {
-    position: relative;
-    display:block;
-  }
-}
-
-//No image species *remove when images are created
-li.land_locked_atlantic_salmon{
-  img{display:none}
-}
-li.kokanee{
-  img{display:none}
-}
-.river_title{
-  h1{
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 48px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    @media only screen and (max-width: 1050px) {
-      visibility: hidden;
-    }
-    @media only screen and (max-width: 40em) {
-      display:none;
-    }
-  }
-}
-.sliding_content_container {
-  position: relative;
-  background-color: #FFF;
-  width:100%!important;
-  max-width: 100%!important;
-  margin-top: 250px;
-}
-

@@ -28,7 +28,7 @@ get_header(); ?>
 
       <div class="large-6 columns">
         <h2>Get In Touch</h2>
-          <?php echo do_shortcode("[contact-form-7 id='68' title='contact_page']"); ?>        
+          <?php echo do_shortcode("[contact-form-7 id='1971' title='contact_page']"); ?>      
       </div>
     </div>
     <div class="row">

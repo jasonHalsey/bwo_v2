@@ -296,6 +296,7 @@ function post_type_report()
     'capability_type' => 'post',
     'hierarchical' => false,
     'menu_position' => null,
+    'show_in_rest' => true,
     'supports' => array('title','excerpt', 'thumbnail')
     ); 
   register_post_type('report',$args);
@@ -454,6 +455,7 @@ function cmb2_lmc_metaboxes( array $meta_boxes ) {
 		'object_types'  => array( 'report' ), // Post type
 		'context'       => 'normal',
 		'priority'      => 'high',
+    'show_in_rest' => WP_REST_Server::READABLE,
 		'show_names'    => true, // Show field names on the left
 		'fields'        => array(
 			
@@ -930,6 +932,11 @@ function be_attachment_field_credit( $form_fields, $post ) {
 }
 
 add_filter( 'attachment_fields_to_edit', 'be_attachment_field_credit', 10, 2 );
+
+function clear_br($content){
+    return str_replace("<br />","<br clear='none'/>", $content);
+  }
+  add_filter('the_content', 'clear_br');
 
 /**
  * Save values of Shopify URL in media uploader

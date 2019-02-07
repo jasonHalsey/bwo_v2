@@ -38,16 +38,14 @@
       <div id="phone_container" class="hide-for-small-only">
         <?php echo $GLOBALS['phone_number'] ?>
       </div>
-
-  	    <?php wp_nav_menu( array( 
-        'menu_id' => 'menu', 
-        'theme_location' => 'primary-menu', 
-        'menu_class' => 'dropdown menu', 
-        'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
-        'walker' => new F6_TOPBAR_MENU_WALKER(),
-        // 'container' => false 
-        ) ); ?>
-
+	    <?php wp_nav_menu( array( 
+      'menu_id' => 'menu', 
+      'theme_location' => 'primary-menu', 
+      'menu_class' => 'dropdown menu', 
+      'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+      'walker' => new F6_TOPBAR_MENU_WALKER(),
+      // 'container' => false 
+      ) ); ?>
 	  </div>
 	</div>
 </div>

@@ -6,11 +6,11 @@ var flowLat = siteLat;
 var flowLong = siteLong;
 var zoomLevel = zoomLevel;
 
-var url = "http://forecast.weather.gov/MapClick.php?lat=" + flowLat + "&lon=" + flowLong + "&FcstType=json"
+var url = "https://forecast.weather.gov/MapClick.php?lat=" + flowLat + "&lon=" + flowLong + "&FcstType=json"
 
 jQuery.getJSON(url, function (json) {
 
-    var extendedWeather = ('<a href="http://forecast.weather.gov/MapClick.php?lat=' + flowLat + '&lon=' + flowLong + '#.V1jqUsfCTzI" target="_blank">See Extended NOAA Forecast</a>');
+    var extendedWeather = ('<a href="https://forecast.weather.gov/MapClick.php?lat=' + flowLat + '&lon=' + flowLong + '#.V1jqUsfCTzI" target="_blank">See Extended NOAA Forecast</a>');
 
     
     var map = L.mapbox.map('map-one', 'mapbox.satellite').setView([flowLat,flowLong], zoomLevel);

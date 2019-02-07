@@ -12,9 +12,11 @@ Template Name: guided trips
   <h3 class="page_title"><?php the_title();?></h3> 
   <h3 class="page_subtitle">Book Your Adventure Today</h3>
 </div>
-<div class="row">  
-  <div id='EmbeddedGrid' class='flybook-embedded-grid'></div><style>.flybook-embedded-grid iframe { height: 900px; width: 100%}</style><link rel='stylesheet' href='https://go.theflybook.com/Content/FrontEnd/front_end.css'/><script src='https://go.theflybook.com/custom/frontend/scheduler/scheduler_bootstrapper.js'></script><script>new Scheduler({accountId:122,targetId:'EmbeddedGrid',domain:'go.theflybook.com',protocol:'https'});</script>
-</div>
+
+
+<div class="row">
+
+<button class='flybook-book-now-button fb-widget-type-frontend fb-default-category-id-0 fb-account-id-122 fb-entity-config-id- fb-domain-go.theflybook.com fb-protocol-https' style='background-color: #ee5505;'>BOOK NOW</button><link rel='stylesheet' href='https://go.theflybook.com/content/bootstrapper/flybookbootstrap.css' /><script src='https://go.theflybook.com/custom/bootstrapper/flybookbootstrap.js'></script>
 
 <div class="insta_footer">
   <?php if ( is_active_sidebar( 'instagram_footer_1' ) ) : ?>

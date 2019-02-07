@@ -33,7 +33,7 @@ get_header(); ?>
           <figcaption>
             <h2>Guided <span>Trips</span></h2>
             <p>Book a trip to get your adventure started</p>
-            <a href="<?php echo home_url( '/guided-trips' ); ?>">View more</a>
+            <a href="http://www.deepcanyonoutfitters.com">View more</a>
           </figcaption>     
         </figure>
       </div>
@@ -61,13 +61,13 @@ get_header(); ?>
       </div>
     </div>
 
-    <div class="store_cta_row">
+<!--     <div class="store_cta_row">
       <div class="large-12 store_cta_message">
         <div class="sh_cta_title"><span>SHOP</span>Confluence</div>
         <div class="sh_cta_msg">Get The Right Gear For Your Next Adventure</div>
         <div class="sh_cta_btn"><a href="https://confluence-fly-shop.myshopify.com"><button>SHOP NOW</button></a></div>
       </div>
-    </div>
+    </div> -->
 
       
 <div class="row feed_row">
@@ -105,13 +105,13 @@ get_header(); ?>
 <?php endwhile; ?>   
 </div><!-- END FEED_ROW -->
 
-<div class="store_cta_row">
-      <div class="large-12 store_cta_message">
-        <div class="sh_cta_title"><span>SHOP</span>Confluence</div>
-        <div class="sh_cta_msg">Get The Right Gear For Your Next Adventure</div>
-        <div class="sh_cta_btn"><a href="https://confluence-fly-shop.myshopify.com"><button>SHOP NOW</button></a></div>
-      </div>
-    </div>
+<!-- <div class="store_cta_row">
+  <div class="large-12 store_cta_message">
+    <div class="sh_cta_title"><span>SHOP</span>Confluence</div>
+    <div class="sh_cta_msg">Get The Right Gear For Your Next Adventure</div>
+    <div class="sh_cta_btn"><a href="https://confluence-fly-shop.myshopify.com"><button>SHOP NOW</button></a></div>
+  </div>
+</div> -->
     
 <div class="insta_footer">
   <?php if ( is_active_sidebar( 'instagram_footer_1' ) ) : ?>
